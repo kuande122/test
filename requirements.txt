@@ -1,10 +1,5 @@
-matplotlib
-numpy
 pandas
 streamlit
-seaborn
-statsmodels
 xlrd
 openpyxl
-plotly
-streamlit-folium
+
