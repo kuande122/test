@@ -13,6 +13,5 @@ def user():
   return option
 user=user()
 user
-Brothers.Brothers()
-st.sidebar.selectbox( '選擇球隊？',team_list)
+
 
