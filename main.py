@@ -17,4 +17,10 @@ def user():
 df_user = user()
  
 df_user
+def users():
+  option = st.sidebar.selectbox( '選擇球隊？',team_list)
+  return option
 
+df_user = users()
+ 
+df_user
