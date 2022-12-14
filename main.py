@@ -10,4 +10,4 @@ team_list={'中信兄弟','樂天桃猿','富邦悍將','統一7-ELEVEn獅', '�
 #st.dataframe(df)
 option = st.sidebar.selectbox( '選擇球隊？',team_list)
 Brothers.Brothers()
-中信兄弟
+
