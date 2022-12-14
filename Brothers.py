@@ -1,5 +1,6 @@
 import streamlit as st 
 from PIL import Image
+st.set_page_config(layout='wide')
 def Brothers():  
     col1, col2 = st.columns(2)
     with col1:
