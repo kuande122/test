@@ -14,7 +14,7 @@ def user():
   teams = pd.DataFrame(user_data, index=[0])
   return teams
 
-df_user = users()
+df_user = user()
  
 df_user
 
