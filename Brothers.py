@@ -1,7 +1,6 @@
 import streamlit as st 
-from PIL import Image
-if option=='中信兄弟':
-  def Brothers():  
+from PIL import image
+def Brothers():  
     col1, col2 = st.columns(2)
     with col1:
       image = Image.open('Brothers/Brothers.png')
