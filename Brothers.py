@@ -1,5 +1,5 @@
 import streamlit as st 
-from PIL import image
+from PIL import Image
 def Brothers():  
     col1, col2 = st.columns(2)
     with col1:
