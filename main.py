@@ -12,4 +12,4 @@ def user():
   df = pd.read_excel("teamsdata.xlsx",sheet_name=option) 
   st.dataframe(df)
   return option
-st.write(option)
+
