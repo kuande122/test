@@ -1,6 +1,5 @@
 import streamlit as st 
 from PIL import Image
-st.set_page_config(layout='wide')
 def Brothers():  
     col1, col2 = st.columns(2)
     with col1:
@@ -27,6 +26,5 @@ def Brothers():
     st.write("嗆司曲 兄弟精神")
     audio_file = open("Brothers/兄弟精神.mp3", "rb")
     st.audio(audio_file.read()) 
-中信兄弟=Brothers()
-  
+
   
