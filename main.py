@@ -10,4 +10,4 @@ option = st.sidebar.selectbox( '選擇球隊？',team_list)
 df = pd.read_excel("teamsdata.xlsx",sheet_name=option) 
 st.dataframe(df)
 
-st.write(option)
+
