@@ -12,7 +12,7 @@ def user():
   option = st.sidebar.selectbox( '選擇球隊？',team_list)
   user_data = {option}
   teams = pd.DataFrame(user_data, index=[0])
-    return teams
+  return teams
 
 df_user = users()
  
