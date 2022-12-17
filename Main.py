@@ -25,7 +25,7 @@ def area():
       teams_list = {'Golden State Warriors', 'Los Angeles Clippers', 'Los Angeles Lakers', 'Phoenix Suns','Sacramento Kings'}    
   if option_area=='Southwest':   
       teams_list = {'Dallas Mavericks', 'Houston Rockets', 'Memphis Grizzlies', 'New Orleans Pelicans','San Antonio Spurs'}                  
-       
+area()       
 option = st.sidebar.selectbox('選擇球隊？',teams_list)
 teams_information.teams_information(option)
 col1,col2=st.columns((6,4))
@@ -46,7 +46,7 @@ with col2:
 st.markdown('### 2021-22球員戰績')
 players_data=pd.read_excel("21-22playersdata.xlsx",sheet_name=option)
 st.dataframe(players_data)
-
+ 
 
 
 
