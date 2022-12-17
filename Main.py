@@ -24,9 +24,10 @@ def area():
   if option_area=='Pacific':   
       teams_list = {'Golden State Warriors', 'Los Angeles Clippers', 'Los Angeles Lakers', 'Phoenix Suns','Sacramento Kings'}    
   if option_area=='Southwest':   
-      teams_list = {'Dallas Mavericks', 'Houston Rockets', 'Memphis Grizzlies', 'New Orleans Pelicans','San Antonio Spurs'}                  
+      teams_list = {'Dallas Mavericks', 'Houston Rockets', 'Memphis Grizzlies', 'New Orleans Pelicans','San Antonio Spurs'}    
+  option = st.sidebar.selectbox('選擇球隊？',teams_list)
 area()       
-option = st.sidebar.selectbox('選擇球隊？',teams_list)
+
 teams_information.teams_information(option)
 col1,col2=st.columns((6,4))
 with col1:
