@@ -12,7 +12,7 @@ st.sidebar.header('請選擇區域及球隊')
 area_list={'Atlantic','Central','Southeast','Northwest','Pacific','Southwest'}
 option_area = st.sidebar.selectbox('選擇球隊？',area_list)
 
-def area(team_list):
+def area(x):
   if option_area=='Atlantic':
       teams_list = {'Boston Celtics', 'Brooklyn Nets', 'New York Knicks', 'Philadelphia 76ers','Toronto Raptors'}
       return teams_list
@@ -31,7 +31,7 @@ def area(team_list):
   if option_area=='Southwest':   
       teams_list = {'Dallas Mavericks', 'Houston Rockets', 'Memphis Grizzlies', 'New Orleans Pelicans','San Antonio Spurs'}
       return teams_list
-option = st.sidebar.selectbox('選擇球隊？',area(teams_list))
+option = st.sidebar.selectbox('選擇球隊？',x)
 
 teams_information.teams_information(option)
 col1,col2=st.columns((6,4))
