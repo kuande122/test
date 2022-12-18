@@ -33,6 +33,7 @@ option = st.sidebar.selectbox('選擇球隊？',teams_list)
 legend_list={'Boston Celtics':{'Bill Russell','Larry Bird','Paul Pierce'},'Brooklyn Nets':{'Julius Erving','Jason Kidd','Derrick Coleman'}}
 st.sidebar.write(legend_list[option])
 
+option1 = st.sidebar.selectbox('選擇球隊？',legend_list[option])
 
 
 
