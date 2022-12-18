@@ -29,6 +29,13 @@ def area():
 teams_list=area()
 option = st.sidebar.selectbox('選擇球隊？',teams_list)
 
+
+legend_list={'Boston Celtics':{'Bill Russell','Larry Bird','Paul Pierce'},'Brooklyn Nets':{'Julius Erving','Jason Kidd','Derrick Coleman'}}
+st.sidebar.write(legend_list['option'])
+
+
+
+
 teams_information.teams_information(option)
 col1,col2=st.columns((6,4))
 with col1:
