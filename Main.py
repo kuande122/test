@@ -72,7 +72,7 @@ league_data=pd.read_excel("nbateamsdata.xlsx",sheet_name='League Average')
 if option1=='三分球命中率':
   col1,col2=st.columns(2)
   with col1:
-   st.write('')           
+   st.dataframe(area_data)         
   with col2:
    plt.style.use("ggplot")
    plt.plot(teams_data.年度,teams_data.三分球命中率 ,'.-' ) 
