@@ -74,6 +74,11 @@ with col2:
               color='項目',
               legend='bottom',
               use_container_width=True)
+ option1 = st.sidebar.selectbox('想查看數據？','想查看數據','3P%','2P%','FT%')
+  
+  
+  
+  
 st.markdown('### 2021-22球員戰績')
 players_data=pd.read_excel("21-22playersdata.xlsx",sheet_name=option)
 st.dataframe(players_data)
@@ -88,4 +93,5 @@ with col1:
    st.dataframe(legendplayer_data.T)
 with col2:
    image = Image.open('legendplayer'+'/'+option_legendplayer+'.jpg')
-   st.image(image)      
+   st.image(image) 
+  
