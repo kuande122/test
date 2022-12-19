@@ -81,7 +81,7 @@ teams_data=pd.read_excel("nbateamsdata.xlsx",sheet_name=option,usecols=["YEAR", 
 st.dataframe(teams_data)
 league_data=pd.read_excel("nbateamsdata.xlsx",sheet_name='League Average') 
 plt.style.use("ggplot")
-plt.plot('.-' ) 
+plt.plot(teams_data.YEAR,teams_data.FT%,'.-' ) 
 plt.xlabel('Season',fontsize="10")
 plt.ylabel(option1,fontsize="10")
 plt.title(option1+'vs League AVG')
