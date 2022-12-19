@@ -78,7 +78,7 @@ data_list={"三分球命中率","2P%","FT%","FG%"}
 option1 = st.selectbox('想查看數據？',data_list)
 teams_data=pd.read_excel("nbateamsdata.xlsx",sheet_name=option) 
 league_data=pd.read_excel("nbateamsdata.xlsx",sheet_name='League Average') 
-if option1='三分球命中率':
+if option1=='三分球命中率':
   plt.style.use("ggplot")
   plt.plot(teams_data.年度,teams_data.三分球命中率 ,'.-' ) 
 plt.xlabel('Season',fontsize="10")
