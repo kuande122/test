@@ -12,24 +12,15 @@ st.set_page_config(layout="wide")
 st.title('NBA資訊面板系統')
 
 st.sidebar.header('請選擇區域及球隊')
-area_list={'Atlantic','Central','Southeast','Northwest','Pacific','Southwest'}
+area_list={'Atlantic':{'Boston Celtics', 'Brooklyn Nets', 'New York Knicks', 'Philadelphia 76ers','Toronto Raptors'},
+           'Central':{'Chicago Bulls', 'Cleveland Cavaliers', 'Detroit Pistons', 'Indiana Pacers','Milwaukee Bucks'},
+           'Southeast':{'Atlanta Hawks', 'Charlotte Hornets', 'Miami Heat', 'Orlando Magic','Washington Wizards'},
+           'Northwest':{'Denver Nuggets', 'Minnesota Timberwolves', 'Oklahoma City Thunder','Portland Trail Blazers','Utah Jazz'},
+           'Pacific':{'Golden State Warriors', 'Los Angeles Clippers', 'Los Angeles Lakers', 'Phoenix Suns','Sacramento Kings'},
+           'Southwest':{'Dallas Mavericks', 'Houston Rockets', 'Memphis Grizzlies', 'New Orleans Pelicans','San Antonio Spurs'}}
 option_area = st.sidebar.selectbox('選擇區域？',area_list)
+option = st.sidebar.selectbox('選擇球隊？',area_list[option_area])
 
-def area():
-  if option_area=='Atlantic':
-      teams_list = {'Boston Celtics', 'Brooklyn Nets', 'New York Knicks', 'Philadelphia 76ers','Toronto Raptors'}
-  if option_area=='Central':
-      teams_list = {'Chicago Bulls', 'Cleveland Cavaliers', 'Detroit Pistons', 'Indiana Pacers','Milwaukee Bucks'} 
-  if option_area=='Southeast':   
-      teams_list = {'Atlanta Hawks', 'Charlotte Hornets', 'Miami Heat', 'Orlando Magic','Washington Wizards'}
-  if option_area=='Northwest':   
-      teams_list = {'Denver Nuggets', 'Minnesota Timberwolves', 'Oklahoma City Thunder','Portland Trail Blazers','Utah Jazz'}
-  if option_area=='Pacific':   
-      teams_list = {'Golden State Warriors', 'Los Angeles Clippers', 'Los Angeles Lakers', 'Phoenix Suns','Sacramento Kings'}    
-  if option_area=='Southwest':   
-      teams_list = {'Dallas Mavericks', 'Houston Rockets', 'Memphis Grizzlies', 'New Orleans Pelicans','San Antonio Spurs'}
-  return teams_list
-teams_list=area()
 
 legend_list={'Boston Celtics':{'Bill Russell','Larry Bird','Paul Pierce'},'Brooklyn Nets':{'Julius Erving','Jason Kidd','Derrick Coleman'},'New York Knicks':{'Walt Frazier','Patrick Ewing','Willis Reed'},
             'Philadelphia 76ers':{'Charles Barkley','Allen Iverson','Wilt Chamberlain'},'Toronto Raptors':{'Kyle Lowry','Chris Bosh','Vince Carter'},'Chicago Bulls':{'Michael Jordan','Dennis Rodman','Scottie Pippen'},
@@ -52,7 +43,6 @@ legend_list={'Boston Celtics':{'Bill Russell','Larry Bird','Paul Pierce'},'Brook
 
 
 
-option = st.sidebar.selectbox('選擇球隊？',teams_list)
 
 teams_information.teams_information(option)
 teams_map.teams_map(option)
