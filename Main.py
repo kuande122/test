@@ -74,7 +74,7 @@ with col2:
               color='項目',
               legend='bottom',
               use_container_width=True)
-data_list={"3P%","2P%","FT%","FG%"}
+data_list={"三分球命中率","2P%","FT%","FG%"}
 option1 = st.selectbox('想查看數據？',data_list)
 teams_data=pd.read_excel("nbateamsdata.xlsx",sheet_name=option) 
 league_data=pd.read_excel("nbateamsdata.xlsx",sheet_name='League Average') 
