@@ -76,12 +76,13 @@ with col2:
               use_container_width=True)
 data_list={"3P%","2P%","FT%","FG%"}
 option1 = st.selectbox('想查看數據？',data_list)
-c=option1
-teams_data=pd.read_excel("nbateamsdata.xlsx",sheet_name=option) 
+
+teams_data=pd.read_excel("nbateamsdata.xlsx",sheet_name=option,usecols=["YEAR", option1]) 
+st.dataframe(teams_data)
 league_data=pd.read_excel("nbateamsdata.xlsx",sheet_name='League Average') 
 plt.style.use("ggplot")
-plt.plot(teams_data.YEAR, teams_data./c,'.-' ) 
-plt.plot(league_data.YEAR, league_data./c,'.-' ) 
+plt.plot(teams_data.YEAR,'.-' ) 
+plt.plot(league_data.YEAR,'.-' ) 
 plt.xlabel('Season',fontsize="10")
 plt.ylabel(option1,fontsize="10")
 plt.title(option1+'vs League AVG')
