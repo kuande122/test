@@ -95,3 +95,5 @@ with col2:
    image = Image.open('legendplayer'+'/'+option_legendplayer+'.jpg')
    st.image(image) 
   
+  
+  
