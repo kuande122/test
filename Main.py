@@ -74,7 +74,7 @@ with col2:
               color='項目',
               legend='bottom',
               use_container_width=True)
-data_list={"三分球命中率","2P%","FT%","FG%"}
+data_list={"三分球命中率":"3P%","2P%","FT%","FG%"}
 option1 = st.selectbox('想查看數據？',data_list)
 teams_data=pd.read_excel("nbateamsdata.xlsx",sheet_name=option) 
 league_data=pd.read_excel("nbateamsdata.xlsx",sheet_name='League Average') 
@@ -82,8 +82,8 @@ if option1=='三分球命中率':
   plt.style.use("ggplot")
   plt.plot(teams_data.年度,teams_data.三分球命中率 ,'.-' ) 
 plt.xlabel('Season',fontsize="10")
-plt.ylabel(option1,fontsize="10")
-plt.title(option1+'vs League AVG')
+plt.ylabel(data_list[option1],fontsize="10")
+plt.title(data_list[option1]+'vs League AVG')
 st.pyplot(plt) 
   
   
