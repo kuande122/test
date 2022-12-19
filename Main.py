@@ -74,7 +74,7 @@ with col2:
               color='項目',
               legend='bottom',
               use_container_width=True)
-option1 = st.selectbox('想查看數據？',["3P%","2P%","FT%"])
+option1 = st.selectbox('想查看數據？',["3P%","2P%","FT%","FG%"])
   
   
   
