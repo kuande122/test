@@ -81,6 +81,7 @@ league_data=pd.read_excel("nbateamsdata.xlsx",sheet_name='League Average')
 if option1=='三分球命中率':
   plt.style.use("ggplot")
   plt.plot(teams_data.年度,teams_data.三分球命中率 ,'.-' ) 
+  plt.plot(league_data.年度,league_data.三分球命中率)
 plt.xlabel('Season',fontsize="10")
 plt.ylabel(data_list[option1],fontsize="10")
 plt.title(data_list[option1]+'vs League AVG')
